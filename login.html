@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="static/common/layui/css/layui.css">
+
+    <!-- MDUI -->
+    <link rel="stylesheet" href="static/common/mdui/css/mdui.css">
+    <script src="static/common/mdui/js/mdui.js"></script>
+    <link rel="stylesheet" href="static/css/main.css">
+</head>
+<body id="loin">
+
+<div class="login mdui-shadow-2">
+    <h2>MuxAdmin后台</h2>
+    <form action="" class="layui-form">
+        <div class="mdui-textfield mdui-textfield-has-bottom ">
+            <i class="mdui-icon material-icons">&#xe853;</i>
+            <label class="mdui-textfield-label">User name</label>
+            <input type="text" class="mdui-textfield-input mdui-shadow-0" name="username">
+        </div>
+        <div class="mdui-textfield mdui-textfield-has-bottom">
+            <i class="mdui-icon material-icons">&#xe897;</i>
+            <label class="mdui-textfield-label">Pass word</label>
+            <input type="password" class="mdui-textfield-input mdui-shadow-0" name="password">
+        </div>
+        <div class="mdui-textfield mdui-textfield-has-bottom ">
+            <button lay-submit lay-filter="submit" class="mdui-ripple mdui-btn mdui-center mdui-btn-raised">登录</button>
+        </div>
+
+    </form>
+</div>
+
+<script src="static/common/layui/layui.js"></script>
+
+
+<script>
+    layui.use('form', () => {
+        let form = layui.form,
+            layer = layui.layer
+
+        form.on('submit(submit)', data => {
+            layer.msg('登录成功！', {icon: 6, time: 1500, anim: 2}, ()=>{
+                location.href = 'index.html'
+            })
+            return false;
+        })
+    })
+</script>
+</body>
+</html>

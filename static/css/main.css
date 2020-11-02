@@ -1,0 +1,62 @@
+/* init */
+*,
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* login */
+
+#loin {
+    background-color: white;
+}
+
+.login {
+    padding: 5vh;
+    background-color: white;
+    width: 440px;
+    height: 310px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login div button {
+
+}
+
+.login h2 {
+    text-align: center;
+}
+
+
+/* left */
+
+.left {
+    background: white;
+    height: 100vh;
+    border-right: 1px #ccc solid;
+    width: 19%;
+}
+
+.left .logo{
+    text-align: center;
+    font-family: "Hack", sans-serif;
+    margin-bottom: 5px;
+}
+
+/* right */
+
+
+.right {
+    background: white;
+    height: 100vh;
+    width: 81%;
+}
+
+.right .mdui-appbar{
+    box-shadow: none;
+    /*border-bottom: 1px solid #ccc;*/
+}
