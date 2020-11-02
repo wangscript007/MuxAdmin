@@ -34,14 +34,20 @@ body {
 
 /* left */
 
-.left {
+#drawer {
     background: white;
     height: 100vh;
-    border-right: 1px #ccc solid;
-    width: 19%;
+    border-right: #ccc solid 1px;
+    /*width: 19%;*/
+    /*width: auto;*/
 }
 
-.left .logo{
+#drawer > h1{
+    text-align: center;
+    font-family: "Hack", sans-serif;
+}
+
+.left .mdui-drawer .logo{
     text-align: center;
     font-family: "Hack", sans-serif;
     margin-bottom: 5px;
@@ -53,7 +59,7 @@ body {
 .right {
     background: white;
     height: 100vh;
-    width: 81%;
+    /*width: 100%;*/
 }
 
 .right .mdui-appbar{
