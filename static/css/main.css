@@ -4,6 +4,9 @@ html,
 body {
     padding: 0;
     margin: 0;
+    color: #1c1e1f !important;
+    font-family: Hack, serif;
+    font-weight: 500;
 }
 
 /* login */
@@ -40,7 +43,7 @@ body {
     border-right: #ccc solid 1px;
 }
 
-#drawer > h1{
+#drawer > h1 {
     text-align: center;
     font-family: "Hack", sans-serif;
 }
@@ -48,14 +51,40 @@ body {
 
 /* right */
 
-
-.right {
-    background: white;
-    height: 100vh;
-    /*width: 100%;*/
+.right-main {
+    padding-top: 1.3em;
 }
 
-.right .mdui-appbar{
-    box-shadow: none;
-    /*border-bottom: 1px solid #ccc;*/
+.mdui-card-primary {
+    padding: 10px;
 }
+
+.border-1 {
+    border: #dedede solid 1px;
+    padding: 1px;
+}
+
+.flex-box {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-box {
+    text-align: center;
+    line-height: 3em;
+    display: inline-block;
+    padding: 10px;
+    margin: 1rem;
+    width: 20%;
+
+}
+
+.card-box p{
+    font-size: .5rem;
+}
+
+/*.mdui-card {*/
+/*    box-shadow: none;*/
+/*    margin: 1em 0;*/
+/*}*/
