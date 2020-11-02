@@ -38,8 +38,6 @@ body {
     background: white;
     height: 100vh;
     border-right: #ccc solid 1px;
-    /*width: 19%;*/
-    /*width: auto;*/
 }
 
 #drawer > h1{
@@ -47,11 +45,6 @@ body {
     font-family: "Hack", sans-serif;
 }
 
-.left .mdui-drawer .logo{
-    text-align: center;
-    font-family: "Hack", sans-serif;
-    margin-bottom: 5px;
-}
 
 /* right */
 
