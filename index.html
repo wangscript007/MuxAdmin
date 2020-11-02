@@ -10,7 +10,10 @@
 
 </head>
 <body class="mdui-drawer-body-left">
+
 <div class="mdui-container-fluid">
+
+    <!-- 左侧菜单 开始 -->
     <div class="mdui-drawer" id="drawer">
         <h1 class="logo">MuxAdmin</h1>
         <ul class="mdui-list" mdui-collapse="{accordion: true}">
@@ -74,43 +77,58 @@
 
         </ul>
     </div>
+    <!-- 左侧菜单 结束-->
 
     <div class="mdui-container-fluid">
-        <div class="mdui-toolbar mdui-color-theme">
-            <button id="toggle" class="mdui-btn mdui-btn-icon mdui-m-a-1"><i class="mdui-icon material-icons">menu</i>
-            </button>
-            <span style="display: none" id="logo" class="mdui-typo-title">MuxAdmin</span>
-            <div class="mdui-toolbar-spacer"></div>
-            <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>
-            <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">refresh</i></a>
-            <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">more_vert</i></a>
+        <!-- 右侧头部 开始 -->
+        <div class="right-header">
+            <div class="mdui-toolbar mdui-color-theme">
+                <button id="toggle" class="mdui-btn mdui-btn-icon mdui-m-a-1"><i
+                        class="mdui-icon material-icons">menu</i>
+                </button>
+                <span style="display: none" id="logo" class="mdui-typo-title">MuxAdmin</span>
+                <div class="mdui-toolbar-spacer"></div>
+                <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>
+                <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i
+                        class="mdui-icon material-icons">refresh</i></a>
+                <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">more_vert</i></a>
+            </div>
+            <div class="mdui-divider"></div>
         </div>
-        <div class="mdui-divider"></div>
+        <!-- 右侧头部 结束 -->
 
+
+        <!-- 左侧内容 开始 -->
+        <div class="right-main">
+
+        </div>
+
+        <!-- 左侧内容 结束 -->
     </div>
+
+
 </div>
 
 <script src="static/common/layui/layui.js"></script>
+<script src="static/common/jquery.min.js"></script>
+<script src="static/common/fixedScroll.js"></script>
 <script>
-
-
     // 左侧状态栏的关闭和打开
     let inst = new mdui.Drawer('#drawer');
 
-    layui.use('jquery', () => {
-        let $ = layui.jquery
+    $('.right-header').fixedScroll()
 
-        $('#toggle').click(() => {
-            inst.toggle();
-        });
 
-        var drawer = $('#drawer');
-        drawer.on('open.mdui.drawer', () => {
-            $("#logo").hide()
-        });
-        drawer.on('close.mdui.drawer', () => {
-            $("#logo").show()
-        });
+    $('#toggle').click(() => {
+        inst.toggle();
+    })
+
+    var drawer = $('#drawer');
+    drawer.on('open.mdui.drawer', () => {
+        $("#logo").hide()
+    })
+    drawer.on('close.mdui.drawer', () => {
+        $("#logo").show()
     })
 
 </script>
