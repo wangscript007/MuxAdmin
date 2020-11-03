@@ -3,30 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="static/common/layui/css/layui.css">
-
     <!-- MDUI -->
     <link rel="stylesheet" href="static/common/mdui/css/mdui.css">
     <script src="static/common/mdui/js/mdui.js"></script>
     <link rel="stylesheet" href="static/css/main.css">
+
+    <style>
+    </style>
 </head>
 <body id="loin">
 
-<div class="login mdui-shadow-2">
+<div class="login border-1 mdui-p-a-3">
     <h2>MuxAdmin后台</h2>
     <form action="" class="layui-form">
-        <div class="mdui-textfield mdui-textfield-has-bottom ">
+        <div class="mdui-textfield ">
             <i class="mdui-icon material-icons">&#xe853;</i>
             <label class="mdui-textfield-label">User name</label>
             <input type="text" class="mdui-textfield-input mdui-shadow-0" name="username">
         </div>
-        <div class="mdui-textfield mdui-textfield-has-bottom">
+        <div class="mdui-textfield ">
             <i class="mdui-icon material-icons">&#xe897;</i>
             <label class="mdui-textfield-label">Pass word</label>
             <input type="password" class="mdui-textfield-input mdui-shadow-0" name="password">
         </div>
+        <div class="mdui-textfield ">
+            <div class="mdui-toolbar" >
+                <input type="checkbox" style="" id="t">
+                <label class="login-checkbox-title" for="t">记住密码</label>
+                <div class="mdui-toolbar-spacer"> </div>
+                <a href="" style="font-size: .82em;">忘记密码</a>
+            </div>
+        </div>
         <div class="mdui-textfield mdui-textfield-has-bottom ">
-            <button lay-submit lay-filter="submit" class="mdui-ripple mdui-btn mdui-center mdui-btn-raised">登录</button>
+            <button lay-submit lay-filter="submit" class=" mdui-ripple mdui-btn mdui-center border-1 ">登录</button>
         </div>
 
     </form>
@@ -41,7 +50,7 @@
             layer = layui.layer
 
         form.on('submit(submit)', data => {
-            layer.msg('登录成功！', {icon: 6, time: 1500, anim: 2}, ()=>{
+            layer.msg('登录成功！', {icon: 6, time: 1500, anim: 2}, () => {
                 location.href = 'index.html'
             })
             return false;
