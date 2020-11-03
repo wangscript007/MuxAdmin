@@ -117,7 +117,7 @@
             <div class="mdui-card border-1 mdui-shadow-0 mdui-m-b-2 ">
                 <div class="mdui-card-primary">
                     <div class="mdui-toolbar mdui-p-a-0">
-                        <a href="#"><button class="mdui-btn border-1">添加用户</button></a>
+                        <a href="cate_add.html"><button class="mdui-btn border-1">添加分类</button></a>
                         <div class="mdui-toolbar-spacer"></div>
                         <div class="mdui-textfield">
                             <i class="mdui-icon material-icons">search</i>
@@ -133,7 +133,8 @@
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>用户名</th>
+                            <th>名称</th>
+                            <th>排序</th>
                             <th>状态</th>
                             <th>时间</th>
                             <th>操作</th>
@@ -142,7 +143,48 @@
                         <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Mark</td>
+                            <td>JAVA</td>
+                            <td>
+                                <input value="1" type="text" name="sort" class="mdui-textfield-input" style="width: 1em">
+                            </td>
+                            <td>
+                                <label class="mdui-switch">
+                                    <input type="checkbox"/>
+                                    <i class="mdui-switch-icon"></i>
+                                </label>
+                            </td>
+                            <td>2020-10-30 14:04:11</td>
+                            <td>
+                                <a href="" class="link"><i class="mdui-icon material-icons">&#xe3c9;</i></a>
+                                |
+                                <a  href=""><i class="mdui-icon material-icons">&#xe872;</i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>PHP</td>
+                            <td>
+                                <input value="2" type="text" name="sort" class="mdui-textfield-input" style="width: 1em">
+                            </td>
+                            <td>
+                                <label class="mdui-switch">
+                                    <input type="checkbox"/>
+                                    <i class="mdui-switch-icon"></i>
+                                </label>
+                            </td>
+                            <td>2020-10-30 14:04:11</td>
+                            <td>
+                                <a href="" class="link"><i class="mdui-icon material-icons">&#xe3c9;</i></a>
+                                |
+                                <a  href=""><i class="mdui-icon material-icons">&#xe872;</i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Python</td>
+                            <td>
+                                <input value="3" type="text" name="sort" id="sort" class="mdui-textfield-input" style="width: 1em">
+                            </td>
                             <td>
                                 <label class="mdui-switch">
                                     <input type="checkbox"/>
