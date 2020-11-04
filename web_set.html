@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>主页 -MuxAdmin</title>
+    <link rel="stylesheet" href="static/common/mdui/css/mdui.css">
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/common/layui/css/layui.css">
+    <script src="static/common/mdui/js/mdui.js"></script>
+
+
+</head>
+<body class="mdui-drawer-body-left">
+
+<div class="mdui-container-fluid">
+
+    <!-- 左侧菜单 开始 -->
+    <div class="mdui-drawer" id="drawer">
+        <h1 class="logo">MuxAdmin</h1>
+        <ul class="mdui-list" mdui-collapse="{accordion: true}">
+            <li class="mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon material-icons">home</i>
+                <div class="mdui-list-item-content"><a href="/">Home</a></div>
+            </li>
+            <li class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">people</i>
+                    <div class="mdui-list-item-content">用户管理</div>
+                    <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                </div>
+                <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                    <a href="user_list.html">
+                        <li class="mdui-list-item mdui-ripple">用户列表</li>
+                    </a>
+                    <a href="user_add.html">
+                        <li class="mdui-list-item mdui-ripple">添加用户</li>
+                    </a>
+                </ul>
+            </li>
+            <li class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">&#xe335;</i>
+                    <div class="mdui-list-item-content">分类管理</div>
+                    <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                </div>
+                <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                    <a href="cate_list.html">
+                        <li class="mdui-list-item mdui-ripple">分类列表</li>
+                    </a>
+                    <a href="cate_add.html">
+                        <li class="mdui-list-item mdui-ripple">添加分类</li>
+                    </a>
+                </ul>
+            </li>
+            <li class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">&#xe02f;</i>
+
+                    <div class="mdui-list-item-content">文章管理</div>
+                    <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                </div>
+                <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                    <a href="article_list.html">
+                        <li class="mdui-list-item mdui-ripple">文章列表</li>
+                    </a>
+                    <a href="article_add.html">
+                        <li class="mdui-list-item mdui-ripple">添加文章</li>
+                    </a>
+                </ul>
+            </li>
+            <li class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <i class="mdui-list-item-icon mdui-icon material-icons">&#xe8b8;</i>
+
+                    <div class="mdui-list-item-content">系统设置</div>
+                    <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+                </div>
+                <ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                    <a href="web_set.html">
+                        <li class="mdui-list-item mdui-ripple">网站设置</li>
+                    </a>
+                    <a href="web_about.html">
+                        <li class="mdui-list-item mdui-ripple">关于信息</li>
+                    </a>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- 左侧菜单 结束-->
+
+    <div class="mdui-container-fluid">
+        <!-- 右侧头部 开始 -->
+        <div class="right-header">
+            <div class="mdui-toolbar mdui-color-theme">
+                <button id="toggle" class="mdui-ripple mdui-btn mdui-btn-icon mdui-m-a-1"><i
+                        class="mdui-icon material-icons">menu</i>
+                </button>
+                <div class="mdui-toolbar-spacer"></div>
+                <a href="javascript:location.reload();" class="mdui-btn mdui-btn-icon"><i
+                        class="mdui-icon material-icons">refresh</i></a>
+
+                <a href="javascript:location.href='/login.html'" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe879;</i></a>
+            </div>
+            <div class="mdui-divider"></div>
+        </div>
+        <!-- 右侧头部 结束 -->
+
+        <!-- 左侧内容 开始 -->
+        <div class="right-main">
+            <div class="mdui-card border-1 mdui-shadow-0 mdui-m-b-2 ">
+                <div class="mdui-card-primary">
+                    <h3>网站设置</h3>
+                </div>
+                <div class="mdui-divider "></div>
+                <div class="mdui-card-content">
+                    <form action="" class="layui-form ">
+                        <div class="mdui-textfield mdui-p-l-2">
+                            <div class="mdui-textfield-label">网站名称</div>
+                            <input name="username" class="mdui-textfield-input" type="text" />
+                        </div>
+                        <div class="mdui-textfield mdui-p-l-2">
+                            <div class="mdui-textfield-label">网站标题</div>
+                            <input name="title" class="mdui-textfield-input" type="text" >
+                        </div>
+                        <div class="mdui-textfield mdui-p-l-2">
+                            <div class="mdui-textfield-label">关键词</div>
+                            <input name="text" class="mdui-textfield-input" type="text" >
+                        </div>
+                        <div class="mdui-textfield mdui-p-l-2">
+                            <div class="mdui-textfield-label">网站描述</div>
+                            <textarea class="mdui-textfield-input" rows="4" placeholder="请输入网站描述"></textarea>
+
+                        </div>
+                        <div class="mdui-textfield mdui-p-l-2">
+                            <div class="mdui-textfield-label">版版所有</div>
+                            <input name="copyright" class="mdui-textfield-input" type="text" >
+                        </div>
+                        <div class="mdui-textfield mdui-p-l-2">
+                            <div class="mdui-textfield-label">备案号</div>
+                            <input name="beian" class="mdui-textfield-input" type="text" >
+                        </div>
+                        <div class="mdui-textfield mdui-p-l-2">
+                            <div class="mdui-textfield-label">关站描述</div>
+                            <textarea class="mdui-textfield-input" rows="4" placeholder="请输入关站描述"></textarea>
+
+                        </div>
+
+
+                        <div class="mdui-textfield mdui-p-l-2">
+                            <div class="mdui-textfield-label mdui-m-b-1">是否关闭网站</div>
+                            <input type="checkbox" name="state" value="1" lay-text="取消|关闭" lay-skin="switch">
+                        </div>
+                        <div class="mdui-textfield mdui-p-l-2">
+                            <button class="mdui-btn border-1" lay-submit lay-filter="submit">提交</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <!-- 左侧内容 结束 -->
+
+        <!-- 左侧底部 开始 -->
+        <div class="mdui-col-xs-12">
+            <div class="bottom">
+                Copyright © 2020.Company MuxAdmin All rights reserved.
+            </div>
+        </div>
+        <!-- 左侧底部 结束 -->
+    </div>
+
+
+</div>
+
+<script src="static/common/layui/layui.js"></script>
+<script src="static/common/jquery.min.js"></script>
+<script src="static/common/fixedScroll.js"></script>
+<script>
+    // 左侧状态栏的关闭和打开
+    let inst = new mdui.Drawer('#drawer');
+    // $('.right-header').fixedScroll()
+    $('#toggle').click(() => {
+        inst.toggle();
+    })
+
+    layui.use('form', () => {
+        let form = layui.form,
+            layer = layui.layer
+
+        form.on('submit(submit)', data => {
+            layer.msg('提交成功！', {icon: 6, time: 1500, anim: 2}, () => {
+                console.log(data.field)
+                // location.href = 'index.html'
+            })
+            return false;
+        })
+    })
+</script>
+</body>
+</html>
