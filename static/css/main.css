@@ -79,6 +79,13 @@ body {
     justify-content: flex-end;
 }
 
+.layui-btn{
+    background: white !important;
+}
+
+.layui-form-select dl dd.layui-this{
+    background: white !important;
+}
 
 .card-box {
     text-align: center;
